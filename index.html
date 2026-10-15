@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề cương nghiên cứu khoa học - VYA</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #e5e7eb;
+            color: #111827;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 13.5pt;
+            line-height: 1.6;
+            padding: 24px 12px 48px;
+        }
+
+        .action-bar {
+            max-width: 820px;
+            margin: 0 auto 14px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            font-family: Arial, sans-serif;
+        }
+
+        .btn {
+            background-color: #ffffff;
+            color: #1f2937;
+            border: 1px solid #d1d5db;
+            padding: 7px 14px;
+            border-radius: 4px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #f3f4f6;
+        }
+
+        .btn-print {
+            background-color: #1d4ed8;
+            color: #ffffff;
+            border-color: #1d4ed8;
+        }
+
+        .btn-print:hover {
+            background-color: #1e40af;
+        }
+
+        .page {
+            max-width: 820px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 56px 68px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .title-area {
+            text-align: center;
+            margin-bottom: 28px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #d1d5db;
+        }
+
+        .school-name {
+            font-size: 12.5pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .doc-label {
+            font-size: 13pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .topic-title {
+            font-size: 15.5pt;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+
+        h2 {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 8px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin: 6px 0 12px 28px;
+            text-align: justify;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .sub-list {
+            margin-top: 4px;
+            margin-bottom: 6px;
+            list-style-type: circle;
+        }
+
+        @media (max-width: 640px) {
+            .page {
+                padding: 28px 20px;
+            }
+        }
+
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+            }
+            .action-bar {
+                display: none !important;
+            }
+            .page {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="action-bar">
+        <button class="btn" onclick="copyContent()">Sao chép bài giải</button>
+        <button class="btn btn-print" onclick="window.print()">In / Lưu PDF</button>
+    </div>
+
+    <div class="page" id="contentArea">
+        <div class="title-area">
+            <div class="school-name">HỌC VIỆN THANH THIẾU NIÊN VIỆT NAM (VYA)</div>
+            <div class="doc-label">TÊN ĐỀ TÀI NGHIÊN CỨU</div>
+            <div class="topic-title">
+                “Thực trạng và giải pháp nâng cao kỹ năng ứng dụng trí tuệ nhân tạo (AI) trong học tập của sinh viên Học viện Thanh thiếu niên Việt Nam hiện nay”
+            </div>
+        </div>
+
+        <div class="doc-label" style="text-align: center; margin-bottom: 16px;">
+            NỘI DUNG ĐỀ CƯƠNG NGHIÊN CỨU CHI TIẾT
+        </div>
+
+        <h2>1. Tính cấp thiết hay lý do chọn đề tài</h2>
+        <ul>
+            <li><strong>Về mặt lý luận và bối cảnh thời đại:</strong> Trong bối cảnh cuộc Cách mạng công nghiệp lần thứ tư và quá trình chuyển đổi số quốc gia đang diễn ra mạnh mẽ, trí tuệ nhân tạo (AI) – đặc biệt là các công cụ AI tạo sinh (như ChatGPT, Gemini, Copilot, Claude...) – đã tạo ra bước ngoặt lớn trong giáo dục đại học. Kỹ năng làm chủ và ứng dụng AI hiệu quả trong học tập, nghiên cứu khoa học trở thành một năng lực thiết yếu của sinh viên hiện đại.</li>
+            <li><strong>Về mặt thực tiễn:</strong> Hiện nay, phần lớn sinh viên Học viện Thanh thiếu niên Việt Nam đã tiếp cận và sử dụng các công cụ AI để hỗ trợ tra cứu tài liệu, tóm tắt văn bản, lên ý tưởng thuyết trình và giải quyết bài tập. Tuy nhiên, việc sử dụng phần nhiều vẫn mang tính tự phát. Nhiều sinh viên còn thiếu kỹ năng đặt câu lệnh (prompting), thiếu khả năng kiểm chứng thông tin, hoặc rơi vào tình trạng lạm dụng, sao chép máy móc dẫn đến giảm khả năng tư duy độc lập và vi phạm liêm chính học thuật.</li>
+            <li><strong>Ý nghĩa của đề tài:</strong> Việc khảo sát, đánh giá khách quan thực trạng kỹ năng ứng dụng AI của sinh viên tại Học viện, từ đó chỉ ra nguyên nhân và đề xuất các giải pháp định hướng đúng đắn là vấn đề mang tính cấp thiết cả về lý luận lẫn thực tiễn. Chính vì vậy, đề tài <em>“Thực trạng và giải pháp nâng cao kỹ năng ứng dụng trí tuệ nhân tạo (AI) trong học tập của sinh viên Học viện Thanh thiếu niên Việt Nam hiện nay”</em> được lựa chọn nghiên cứu.</li>
+        </ul>
+
+        <h2>2. Mục đích và mục tiêu nghiên cứu</h2>
+        <ul>
+            <li><strong>Mục đích nghiên cứu (Hướng tới giá trị thực tiễn lâu dài):</strong><br>
+            Đề xuất các giải pháp khả thi nhằm nâng cao kỹ năng ứng dụng trí tuệ nhân tạo (AI) một cách hiệu quả, có trách nhiệm và đúng chuẩn mực học thuật, qua đó góp phần nâng cao chất lượng tự học và kết quả học tập của sinh viên Học viện Thanh thiếu niên Việt Nam.</li>
+            <li><strong>Mục tiêu nghiên cứu (Các đích đến cụ thể của đề tài):</strong>
+                <ul class="sub-list">
+                    <li>Làm rõ cơ sở lý luận về kỹ năng ứng dụng trí tuệ nhân tạo (AI) trong học tập của sinh viên.</li>
+                    <li>Đánh giá đúng thực trạng và các yếu tố ảnh hưởng đến kỹ năng ứng dụng AI trong học tập của sinh viên Học viện Thanh thiếu niên Việt Nam hiện nay.</li>
+                    <li>Xây dựng hệ thống giải pháp và khuyến nghị giúp sinh viên nâng cao kỹ năng ứng dụng AI hiệu quả trong học tập.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3. Nhiệm vụ nghiên cứu</h2>
+        <p>Để đạt được mục đích và mục tiêu trên, đề tài tập trung thực hiện các nhiệm vụ sau:</p>
+        <ol>
+            <li>Hệ thống hóa các khái niệm công cụ (trí tuệ nhân tạo, kỹ năng, kỹ năng ứng dụng AI trong học tập) và các lý thuyết liên quan.</li>
+            <li>Khảo sát, phân tích thực trạng nhận thức, thái độ và hành vi/kỹ năng ứng dụng AI trong học tập của sinh viên Học viện Thanh thiếu niên Việt Nam (mục đích sử dụng, tần suất, cách thức khai thác, kiểm chứng thông tin và những hạn chế).</li>
+            <li>Phân tích các yếu tố chủ quan và khách quan tác động đến kỹ năng ứng dụng AI trong học tập của sinh viên Học viện.</li>
+            <li>Đề xuất các giải pháp đối với sinh viên, giảng viên và Nhà trường nhằm nâng cao hiệu quả ứng dụng AI trong học tập.</li>
+        </ol>
+
+        <h2>4. Đối tượng nghiên cứu</h2>
+        <ul>
+            <li>Thực trạng kỹ năng ứng dụng trí tuệ nhân tạo (AI) trong học tập và các giải pháp nâng cao kỹ năng này của sinh viên Học viện Thanh thiếu niên Việt Nam.</li>
+        </ul>
+
+        <h2>5. Khách thể nghiên cứu</h2>
+        <ul>
+            <li><strong>Khách thể khảo sát chính:</strong> Sinh viên hệ đại học chính quy đang theo học tại Học viện Thanh thiếu niên Việt Nam (từ năm thứ nhất đến năm thứ tư).</li>
+            <li><strong>Khách thể bổ trợ:</strong> Giảng viên, cán bộ quản lý giáo dục tại Học viện Thanh thiếu niên Việt Nam.</li>
+        </ul>
+
+        <h2>6. Giả thuyết nghiên cứu</h2>
+        <ul>
+            <li><strong>Giả thuyết 1 (Về thực trạng):</strong> Đa số sinh viên Học viện Thanh thiếu niên Việt Nam đã biết sử dụng AI trong học tập, nhưng kỹ năng ứng dụng mới dừng ở mức độ cơ bản (tìm kiếm thông tin, giải bài tập nhanh); kỹ năng đặt câu lệnh chuyên sâu, tư duy phản biện và kiểm chứng nguồn tin từ AI còn hạn chế; vẫn tồn tại hiện tượng phụ thuộc vào AI.</li>
+            <li><strong>Giả thuyết 2 (Về yếu tố ảnh hưởng):</strong> Kỹ năng ứng dụng AI của sinh viên chịu ảnh hưởng trực tiếp bởi các yếu tố chủ quan (nhận thức, động cơ học tập, năng lực công nghệ số của bản thân sinh viên) và các yếu tố khách quan (sự định hướng của giảng viên, yêu cầu đổi mới phương pháp kiểm tra đánh giá, môi trường học thuật của Nhà trường).</li>
+            <li><strong>Giả thuyết 3 (Về giải pháp):</strong> Nếu sinh viên được trang bị bài bản về kỹ năng khai thác AI kết hợp với các quy định hướng dẫn về liêm chính học thuật từ phía Nhà trường thì hiệu quả tự học và chất lượng nghiên cứu của sinh viên sẽ được nâng cao rõ rệt.</li>
+        </ul>
+
+        <h2>7. Phạm vi nghiên cứu</h2>
+        <ul>
+            <li><strong>Phạm vi nội dung:</strong> Đề tài tập trung nghiên cứu kỹ năng sử dụng các công cụ AI tạo sinh phổ biến (như ChatGPT, Google Gemini, Microsoft Copilot, Canva AI...) phục vụ cho việc học tập trên lớp, tự học và nghiên cứu khoa học của sinh viên.</li>
+            <li><strong>Phạm vi không gian:</strong> Nghiên cứu được thực hiện tại Học viện Thanh thiếu niên Việt Nam (cơ sở Hà Nội).</li>
+            <li><strong>Phạm vi thời gian:</strong> Các dữ liệu thứ cấp và khảo sát thực tế được thu thập trong giai đoạn năm học 2025 – 2026.</li>
+        </ul>
+
+        <h2>8. Nội dung nghiên cứu (Kết cấu dự kiến của đề tài)</h2>
+        <p>Ngoài phần Mở đầu, Kết luận và Danh mục tài liệu tham khảo, nội dung chính của đề tài được kết cấu thành 3 chương:</p>
+        <ul>
+            <li><strong>Chương 1: Cơ sở lý luận về kỹ năng ứng dụng trí tuệ nhân tạo (AI) trong học tập của sinh viên</strong>
+                <ul class="sub-list">
+                    <li>1.1. Tổng quan tình hình nghiên cứu thuộc lĩnh vực đề tài.</li>
+                    <li>1.2. Các khái niệm cơ bản (Trí tuệ nhân tạo, kỹ năng, kỹ năng ứng dụng AI trong học tập).</li>
+                    <li>1.3. Nội dung, biểu hiện và các tiêu chí đánh giá kỹ năng ứng dụng AI trong học tập của sinh viên.</li>
+                    <li>1.4. Các yếu tố ảnh hưởng đến kỹ năng ứng dụng AI trong học tập của sinh viên.</li>
+                </ul>
+            </li>
+            <li><strong>Chương 2: Thực trạng kỹ năng ứng dụng trí tuệ nhân tạo (AI) trong học tập của sinh viên Học viện Thanh thiếu niên Việt Nam hiện nay</strong>
+                <ul class="sub-list">
+                    <li>2.1. Khái quát về địa bàn và khách thể khảo sát.</li>
+                    <li>2.2. Thực trạng nhận thức và thái độ của sinh viên về vai trò của AI trong học tập.</li>
+                    <li>2.3. Thực trạng mức độ và kỹ năng ứng dụng AI trong học tập của sinh viên Học viện Thanh thiếu niên Việt Nam (kỹ năng đặt lệnh, xử lý thông tin, tuân thủ đạo đức học thuật).</li>
+                    <li>2.4. Đánh giá chung (ưu điểm, hạn chế) và phân tích nguyên nhân/yếu tố ảnh hưởng.</li>
+                </ul>
+            </li>
+            <li><strong>Chương 3: Giải pháp nâng cao kỹ năng ứng dụng trí tuệ nhân tạo (AI) trong học tập cho sinh viên Học viện Thanh thiếu niên Việt Nam</strong>
+                <ul class="sub-list">
+                    <li>3.1. Định hướng và nguyên tắc đề xuất giải pháp.</li>
+                    <li>3.2. Các nhóm giải pháp cụ thể (Đối với bản thân sinh viên; Đối với giảng viên; Đối với Nhà trường và Đoàn Thanh niên - Hội Sinh viên).</li>
+                    <li>3.3. Kiến nghị.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>9. Phương pháp luận và phương pháp nghiên cứu</h2>
+        <ul>
+            <li><strong>Phương pháp luận nghiên cứu:</strong>
+                <ul class="sub-list">
+                    <li>Đề tài dựa trên cơ sở phương pháp luận của chủ nghĩa duy vật biện chứng và chủ nghĩa duy vật lịch sử (xem xét vấn đề trong sự vận động, phát triển và mối liên hệ đa chiều).</li>
+                    <li><strong>Các quan điểm tiếp cận:</strong>
+                        <br>- <em>Tiếp cận hệ thống – cấu trúc:</em> Xem xét kỹ năng ứng dụng AI như một chỉnh thể gồm nhận thức, thái độ và hành vi cụ thể.
+                        <br>- <em>Tiếp cận thực tiễn:</em> Xuất phát từ điều kiện học tập thực tế của sinh viên tại Học viện Thanh thiếu niên Việt Nam.
+                        <br>- <em>Tiếp cận hành vi và hoạt động:</em> Đánh giá kỹ năng thông qua các thao tác, hành vi sử dụng công cụ AI cụ thể của sinh viên.
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Phương pháp nghiên cứu cụ thể:</strong>
+                <ol>
+                    <li><strong>Phương pháp nghiên cứu tài liệu (Thu thập dữ liệu thứ cấp):</strong> Phân tích, tổng hợp, hệ thống hóa các giáo trình, bài báo khoa học, báo cáo liên quan đến ứng dụng AI trong giáo dục đại học để xây dựng khung lý thuyết.</li>
+                    <li><strong>Phương pháp điều tra bằng bảng hỏi (Khảo sát định lượng):</strong> Thiết kế phiếu khảo sát (trực tuyến qua Google Forms và phiếu in trực tiếp) với cỡ mẫu dự kiến khoảng 200 – 300 sinh viên đại diện cho các khoa, các khóa học tại Học viện nhằm thu thập số liệu khách quan về thực trạng.</li>
+                    <li><strong>Phương pháp phỏng vấn sâu (Khảo sát định tính):</strong> Thực hiện phỏng vấn trực tiếp một số sinh viên và giảng viên để làm rõ hơn nguyên nhân, động cơ và những khó khăn thực tế khi sử dụng AI.</li>
+                    <li><strong>Phương pháp thống kê toán học và xử lý số liệu:</strong> Sử dụng phần mềm SPSS hoặc Microsoft Excel để thống kê mô tả (tần suất, tỷ lệ phần trăm, điểm trung bình) nhằm lượng hóa kết quả nghiên cứu.</li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function copyContent() {
+            const text = document.getElementById('contentArea').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Đã sao chép nội dung đáp án!');
+            });
+        }
+    </script>
+</body>
+</html>
